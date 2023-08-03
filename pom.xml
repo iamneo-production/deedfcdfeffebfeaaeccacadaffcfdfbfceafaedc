@@ -28,6 +28,21 @@
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>3.7.0.1746</version>
+                    <executions>
+                    <execution>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                        <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                        <sources>
+                            <source>some directory</source>
+                            ...
+                        </sources>
+                        </configuration>
+                    </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
