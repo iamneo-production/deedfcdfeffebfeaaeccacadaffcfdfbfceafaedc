@@ -24,10 +24,8 @@ public class TaskController {
 	private TaskService taskService ; 
     
     @PostMapping("/saveTask")
-	    public Task saveTask(@RequestBody TaskDTO taskDTO , @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
-	    	
-	        return taskService.addTasks(taskDTO) ;
-	        
+	    public Task saveTask(@RequestBody TaskDTO taskDTO , @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {	
+	        return taskService.addTasks(taskDTO) ;  
 	    }
 	    
 	    @GetMapping("/alltasks")
