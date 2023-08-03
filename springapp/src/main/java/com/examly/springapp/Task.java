@@ -12,6 +12,7 @@ import java.time.LocalDate;
 public class Task {
     
     @Id
+    @Column(name = "task_id")
     private Long taskId;
 
     @Column(name = "task_holder_name")
